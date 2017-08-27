@@ -53,9 +53,9 @@
       <Project>{f37e382b-5c7e-4079-9402-c4d401c486d4}</Project>
       <Name>UrlShortener.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UrlShortener.Models\UrlShortener.Models.csproj">
+    <ProjectReference Include="..\UrlShortener.Core\UrlShortener.Core.csproj">
       <Project>{fd679b81-51dc-49c3-9967-d5b095478f95}</Project>
-      <Name>UrlShortener.Models</Name>
+      <Name>UrlShortener.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

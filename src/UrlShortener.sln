@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Logic", "UrlSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Logic.Tests", "UrlShortener.Logic.Tests\UrlShortener.Logic.Tests.csproj", "{9561D714-85DC-4DC7-8661-7D6AC74254A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Models", "UrlShortener.Models\UrlShortener.Models.csproj", "{FD679B81-51DC-49C3-9967-D5B095478F95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Core", "UrlShortener.Core\UrlShortener.Core.csproj", "{FD679B81-51DC-49C3-9967-D5B095478F95}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.DataAccess", "UrlShortener.DataAccess\UrlShortener.DataAccess.csproj", "{F37E382B-5C7E-4079-9402-C4D401C486D4}"
 EndProject
@@ -24,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.UI.Tests", "UrlShortener.UI.Tests\UrlShortener.UI.Tests.csproj", "{FA9BB4E8-38D6-4922-905A-92EE42FAF563}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.WebApi.Tests", "UrlShortener.WebApi.Tests\UrlShortener.WebApi.Tests.csproj", "{4833F69E-FD69-47E5-B56B-42646E0EAB22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Loggers.ApplicationInsights", "UrlShortener.Loggers.ApplicationInsights\UrlShortener.Loggers.ApplicationInsights.csproj", "{E3A537DA-861F-4107-AA1C-0848657F1C66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{4833F69E-FD69-47E5-B56B-42646E0EAB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4833F69E-FD69-47E5-B56B-42646E0EAB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4833F69E-FD69-47E5-B56B-42646E0EAB22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3A537DA-861F-4107-AA1C-0848657F1C66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3A537DA-861F-4107-AA1C-0848657F1C66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3A537DA-861F-4107-AA1C-0848657F1C66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3A537DA-861F-4107-AA1C-0848657F1C66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,5 +87,6 @@ Global
 		{91F067EF-E836-4EFC-BF72-CF95DA723269} = {D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}
 		{FA9BB4E8-38D6-4922-905A-92EE42FAF563} = {D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}
 		{4833F69E-FD69-47E5-B56B-42646E0EAB22} = {D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}
+		{E3A537DA-861F-4107-AA1C-0848657F1C66} = {C8C2BEBE-66C6-4E5C-A326-0FA26519AF91}
 	EndGlobalSection
 EndGlobal

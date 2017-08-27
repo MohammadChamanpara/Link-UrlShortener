@@ -8,7 +8,8 @@ using System.Threading.Tasks;
 using Moq;
 using FluentAssertions;
 using UrlShortener.DataAccess;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
+using UrlShortener.Core.Log;
 
 namespace UrlShortener.Logic.Tests
 {
@@ -22,7 +23,8 @@ namespace UrlShortener.Logic.Tests
 		{
 			//Arrange 
 			var mockUnitOfWork = Mock.Of<IUnitOfWork>();
-			var logic = new UrlLogic(mockUnitOfWork);
+			var mocklogger = Mock.Of<ILogger>();
+			var logic = new UrlLogic(mockUnitOfWork, mocklogger);
 
 			//Act
 			logic.Shorten(null);
@@ -37,8 +39,10 @@ namespace UrlShortener.Logic.Tests
 			var mockLinkRepository = Mock.Of<IRepository<Link>>();
 			var mockUnitOfWork = new Mock<IUnitOfWork>();
 			mockUnitOfWork.SetupGet(x => x.LinkRepository).Returns(mockLinkRepository);
+			var mocklogger = Mock.Of<ILogger>();
 
-			var logic = new UrlLogic(mockUnitOfWork.Object);
+			var logic = new UrlLogic(mockUnitOfWork.Object, mocklogger);
+
 			var link = new Link()
 			{
 				LongUrl = "some url",
@@ -60,8 +64,10 @@ namespace UrlShortener.Logic.Tests
 			var mockLinkRepository = Mock.Of<IRepository<Link>>();
 			var mockUnitOfWork = new Mock<IUnitOfWork>();
 			mockUnitOfWork.SetupGet(x => x.LinkRepository).Returns(mockLinkRepository);
+			var mocklogger = Mock.Of<ILogger>();
 
-			var logic = new UrlLogic(mockUnitOfWork.Object);
+			var logic = new UrlLogic(mockUnitOfWork.Object, mocklogger);
+
 			var link = new Link()
 			{
 				LongUrl = "some url",
@@ -83,8 +89,10 @@ namespace UrlShortener.Logic.Tests
 			var mockLinkRepository = Mock.Of<IRepository<Link>>();
 			var mockUnitOfWork = new Mock<IUnitOfWork>();
 			mockUnitOfWork.SetupGet(x => x.LinkRepository).Returns(mockLinkRepository);
+			var mocklogger = Mock.Of<ILogger>();
 
-			var logic = new UrlLogic(mockUnitOfWork.Object);
+			var logic = new UrlLogic(mockUnitOfWork.Object, mocklogger);
+
 			var link = new Link()
 			{
 				LongUrl = "some url",
@@ -106,8 +114,9 @@ namespace UrlShortener.Logic.Tests
 			var mockLinkRepository = new Mock<IRepository<Link>>();
 			var mockUnitOfWork = new Mock<IUnitOfWork>();
 			mockUnitOfWork.SetupGet(x => x.LinkRepository).Returns(mockLinkRepository.Object);
+			var mocklogger = Mock.Of<ILogger>();
 
-			var logic = new UrlLogic(mockUnitOfWork.Object);
+			var logic = new UrlLogic(mockUnitOfWork.Object, mocklogger);
 			var link = new Link()
 			{
 				LongUrl = "some url",
@@ -130,7 +139,9 @@ namespace UrlShortener.Logic.Tests
 		{
 			//Arrange 
 			var mockUnitOfWork = Mock.Of<IUnitOfWork>();
-			var logic = new UrlLogic(mockUnitOfWork);
+			var mocklogger = Mock.Of<ILogger>();
+
+			var logic = new UrlLogic(mockUnitOfWork, mocklogger);
 
 			//Act
 			logic.Expand(null);
@@ -148,7 +159,9 @@ namespace UrlShortener.Logic.Tests
 			var mockUnitOfWork = new Mock<IUnitOfWork>();
 			mockUnitOfWork.SetupGet(x => x.LinkRepository).Returns(mockLinkRepository.Object);
 			mockLinkRepository.Setup(x => x.GetByID(0)).Returns((Link)null);
-			var logic = new UrlLogic(mockUnitOfWork.Object);
+			var mocklogger = Mock.Of<ILogger>();
+
+			var logic = new UrlLogic(mockUnitOfWork.Object, mocklogger);
 
 			//Act
 			logic.Expand("AAAAAA");
@@ -167,7 +180,9 @@ namespace UrlShortener.Logic.Tests
 			var mockUnitOfWork = new Mock<IUnitOfWork>();
 			mockUnitOfWork.SetupGet(x => x.LinkRepository).Returns(mockLinkRepository.Object);
 			mockLinkRepository.Setup(x => x.GetByID(It.IsAny<int>())).Returns((Link)null);
-			var logic = new UrlLogic(mockUnitOfWork.Object);
+			var mocklogger = Mock.Of<ILogger>();
+
+			var logic = new UrlLogic(mockUnitOfWork.Object, mocklogger);
 
 			//Act
 			logic.Expand("InvalidValule");
@@ -186,10 +201,12 @@ namespace UrlShortener.Logic.Tests
 			var link = new Link()
 			{
 				Clicks = 0,
-				LongUrl="longUrl"
+				LongUrl = "longUrl"
 			};
 			mockLinkRepository.Setup(x => x.GetByID(It.IsAny<int>())).Returns(link);
-			var logic = new UrlLogic(mockUnitOfWork.Object);
+			var mocklogger = Mock.Of<ILogger>();
+
+			var logic = new UrlLogic(mockUnitOfWork.Object, mocklogger);
 
 			//Act
 			logic.Expand("AAAAAA");

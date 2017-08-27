@@ -65,9 +65,9 @@
     <Compile Include="DataAccess\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\UrlShortener.Models\UrlShortener.Models.csproj">
+    <ProjectReference Include="..\UrlShortener.Core\UrlShortener.Core.csproj">
       <Project>{fd679b81-51dc-49c3-9967-d5b095478f95}</Project>
-      <Name>UrlShortener.Models</Name>
+      <Name>UrlShortener.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

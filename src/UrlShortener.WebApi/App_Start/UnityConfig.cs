@@ -3,7 +3,9 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using UrlShortener.Logic;
 using UrlShortener.DataAccess;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
+using UrlShortener.Core.Log;
+using UrlShortener.Loggers.AzureApplicationInsights;
 
 namespace UrlShortener.WebApi.App_Start
 {
@@ -38,6 +40,7 @@ namespace UrlShortener.WebApi.App_Start
 			container.RegisterType<IUnitOfWork, UnitOfWork>();
 			container.RegisterType<IUrlShortenerContext, UrlShortenerContext>(new HierarchicalLifetimeManager());
 			container.RegisterType<IRepository<Link>, Repository<Link>>(new TransientLifetimeManager());
+			container.RegisterType<ILogger, AiLogger>();
 		}
     }
 }

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using UrlShortener.DataAccess.Tests.Helpers;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
 
 namespace UrlShortener.DataAccess.Tests
 {

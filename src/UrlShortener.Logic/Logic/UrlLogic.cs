@@ -1,6 +1,7 @@
 ﻿using System;
 using UrlShortener.DataAccess;
 using UrlShortener.Core.Models;
+using UrlShortener.Core.Log;
 
 namespace UrlShortener.Logic
 {
@@ -12,14 +13,16 @@ namespace UrlShortener.Logic
 	public class UrlLogic : IUrlLogic
 	{
 		private IUnitOfWork unitOfWork;
+		private ILogger logger;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="UrlLogic"/> class.
 		/// </summary>
 		/// <param name="unitOfWork">The unit of work to access the data.</param>
-		public UrlLogic(IUnitOfWork unitOfWork)
+		public UrlLogic(IUnitOfWork unitOfWork, ILogger logger)
 		{
 			this.unitOfWork = unitOfWork;
+			this.logger = logger;
 		}
 
 		/// <summary>

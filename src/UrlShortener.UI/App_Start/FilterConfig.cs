@@ -7,7 +7,7 @@ namespace UrlShortener.UI
 	{
 		public static void RegisterGlobalFilters(GlobalFilterCollection filters)
 		{
-			filters.Add(new HandleErrorAttribute() { View = "Error" });
+			filters.Add(new ErrorHandler.AiHandleErrorAttribute());
 		}
 	}
 }

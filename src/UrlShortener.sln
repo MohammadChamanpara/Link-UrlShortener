@@ -25,7 +25,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.UI.Tests", "Ur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.WebApi.Tests", "UrlShortener.WebApi.Tests\UrlShortener.WebApi.Tests.csproj", "{4833F69E-FD69-47E5-B56B-42646E0EAB22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Loggers.AzureApplicationInsights", "UrlShortener.Loggers.AzureApplicationInsights\UrlShortener.Loggers.AzureApplicationInsights.csproj", "{E3A537DA-861F-4107-AA1C-0848657F1C66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Loggers.ApplicationInsights", "UrlShortener.Loggers.ApplicationInsights\UrlShortener.Loggers.ApplicationInsights.csproj", "{E3A537DA-861F-4107-AA1C-0848657F1C66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -70,7 +70,8 @@ namespace UrlShortener.UI.Controllers
 				return new HttpNotFoundResult("The requested url could not be found.");
 			}
 
-			/* Permanent redirect has been chosen to help SEO with better rating 
+			/*
+			 * Permanent redirect has been chosen to help SEO with better rating 
 			 * bacause google when facing a 301, passes page rank to the final destination
 			 * It is also useful for Googlebots operations
 			 */

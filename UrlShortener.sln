@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.WebApi", "UrlShortener.WebApi\UrlShortener.WebApi.csproj", "{0E49CCB9-78B2-4637-BF64-6A917608BC78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Logic", "UrlShortener.Logic\UrlShortener.Logic.csproj", "{7A1812D6-E712-4111-A4E6-BCD2E90B248B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Logic.Tests", "UrlShortener.Logic.Tests\UrlShortener.Logic.Tests.csproj", "{9561D714-85DC-4DC7-8661-7D6AC74254A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Models", "UrlShortener.Models\UrlShortener.Models.csproj", "{FD679B81-51DC-49C3-9967-D5B095478F95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.DataAccess", "UrlShortener.DataAccess\UrlShortener.DataAccess.csproj", "{F37E382B-5C7E-4079-9402-C4D401C486D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UrlShortener.Tests", "UrlShortener.Tests", "{D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UrlShortener", "UrlShortener", "{C8C2BEBE-66C6-4E5C-A326-0FA26519AF91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.UI", "UrlShortener.UI\UrlShortener.UI.csproj", "{953C61E4-F6B3-47DF-8EBB-C0DD4F300626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.DataAccess.Tests", "UrlShortener.DataAccess.Tests\UrlShortener.DataAccess.Tests.csproj", "{91F067EF-E836-4EFC-BF72-CF95DA723269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.UI.Tests", "UrlShortener.UI.Tests\UrlShortener.UI.Tests.csproj", "{FA9BB4E8-38D6-4922-905A-92EE42FAF563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.WebApi.Tests", "UrlShortener.WebApi.Tests\UrlShortener.WebApi.Tests.csproj", "{4833F69E-FD69-47E5-B56B-42646E0EAB22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E49CCB9-78B2-4637-BF64-6A917608BC78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E49CCB9-78B2-4637-BF64-6A917608BC78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E49CCB9-78B2-4637-BF64-6A917608BC78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E49CCB9-78B2-4637-BF64-6A917608BC78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A1812D6-E712-4111-A4E6-BCD2E90B248B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A1812D6-E712-4111-A4E6-BCD2E90B248B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A1812D6-E712-4111-A4E6-BCD2E90B248B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A1812D6-E712-4111-A4E6-BCD2E90B248B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9561D714-85DC-4DC7-8661-7D6AC74254A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9561D714-85DC-4DC7-8661-7D6AC74254A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9561D714-85DC-4DC7-8661-7D6AC74254A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9561D714-85DC-4DC7-8661-7D6AC74254A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD679B81-51DC-49C3-9967-D5B095478F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD679B81-51DC-49C3-9967-D5B095478F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD679B81-51DC-49C3-9967-D5B095478F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD679B81-51DC-49C3-9967-D5B095478F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F37E382B-5C7E-4079-9402-C4D401C486D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37E382B-5C7E-4079-9402-C4D401C486D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37E382B-5C7E-4079-9402-C4D401C486D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37E382B-5C7E-4079-9402-C4D401C486D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{953C61E4-F6B3-47DF-8EBB-C0DD4F300626}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{953C61E4-F6B3-47DF-8EBB-C0DD4F300626}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{953C61E4-F6B3-47DF-8EBB-C0DD4F300626}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{953C61E4-F6B3-47DF-8EBB-C0DD4F300626}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F067EF-E836-4EFC-BF72-CF95DA723269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F067EF-E836-4EFC-BF72-CF95DA723269}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F067EF-E836-4EFC-BF72-CF95DA723269}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F067EF-E836-4EFC-BF72-CF95DA723269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA9BB4E8-38D6-4922-905A-92EE42FAF563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA9BB4E8-38D6-4922-905A-92EE42FAF563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA9BB4E8-38D6-4922-905A-92EE42FAF563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA9BB4E8-38D6-4922-905A-92EE42FAF563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4833F69E-FD69-47E5-B56B-42646E0EAB22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4833F69E-FD69-47E5-B56B-42646E0EAB22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4833F69E-FD69-47E5-B56B-42646E0EAB22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4833F69E-FD69-47E5-B56B-42646E0EAB22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E49CCB9-78B2-4637-BF64-6A917608BC78} = {C8C2BEBE-66C6-4E5C-A326-0FA26519AF91}
+		{7A1812D6-E712-4111-A4E6-BCD2E90B248B} = {C8C2BEBE-66C6-4E5C-A326-0FA26519AF91}
+		{9561D714-85DC-4DC7-8661-7D6AC74254A9} = {D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}
+		{FD679B81-51DC-49C3-9967-D5B095478F95} = {C8C2BEBE-66C6-4E5C-A326-0FA26519AF91}
+		{F37E382B-5C7E-4079-9402-C4D401C486D4} = {C8C2BEBE-66C6-4E5C-A326-0FA26519AF91}
+		{953C61E4-F6B3-47DF-8EBB-C0DD4F300626} = {C8C2BEBE-66C6-4E5C-A326-0FA26519AF91}
+		{91F067EF-E836-4EFC-BF72-CF95DA723269} = {D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}
+		{FA9BB4E8-38D6-4922-905A-92EE42FAF563} = {D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}
+		{4833F69E-FD69-47E5-B56B-42646E0EAB22} = {D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}
+	EndGlobalSection
+EndGlobal

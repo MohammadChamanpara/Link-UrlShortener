@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
 
 namespace UrlShortener.DataAccess
 {

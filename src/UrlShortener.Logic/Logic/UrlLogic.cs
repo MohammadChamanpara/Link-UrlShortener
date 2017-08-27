@@ -1,6 +1,7 @@
 ﻿using System;
 using UrlShortener.DataAccess;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
+using UrlShortener.Core.Log;
 
 namespace UrlShortener.Logic
 {
@@ -12,14 +13,16 @@ namespace UrlShortener.Logic
 	public class UrlLogic : IUrlLogic
 	{
 		private IUnitOfWork unitOfWork;
+		private ILogger logger;
 
 		/// <summary>
 		/// Initializes a new instance of the <see cref="UrlLogic"/> class.
 		/// </summary>
 		/// <param name="unitOfWork">The unit of work to access the data.</param>
-		public UrlLogic(IUnitOfWork unitOfWork)
+		public UrlLogic(IUnitOfWork unitOfWork, ILogger logger)
 		{
 			this.unitOfWork = unitOfWork;
+			this.logger = logger;
 		}
 
 		/// <summary>
@@ -28,8 +31,12 @@ namespace UrlShortener.Logic
 		/// <param name="link">The link objbect to be modified with the calculated of ShortUrl.</param>
 		public virtual void Shorten(Link link)
 		{
+			logger.Debug("Shorten request received for LongUrl: {0}", link?.LongUrl);
+
 			if (link?.LongUrl == null)
+			{
 				throw new ArgumentException("Long url is not provided to be shortened.");
+			}
 
 			link.CreatedDate = DateTime.Now;
 
@@ -37,7 +44,11 @@ namespace UrlShortener.Logic
 			unitOfWork.Save();
 
 			if (link.Id == 0)
-				throw new Exception("Unable to add record to the database.");
+			{
+				string message = "Unable to add record to the database.";
+				logger.Fatal(message);
+				throw new Exception(message);
+			}
 
 			link.ShortUrl = this.IdToShortUrl(link.Id);
 		}
@@ -49,15 +60,23 @@ namespace UrlShortener.Logic
 		/// <returns>A link object having all the url information including the calculated LongUrl</returns>
 		public virtual Link Expand(string shortUrl)
 		{
+			logger.Debug("Expand request received for shortUrl: {0}", shortUrl);
+
 			if (string.IsNullOrEmpty(shortUrl))
+			{
 				throw new ArgumentException("Short url must have a value to be expanded.");
+			}
 
 			int id = ShortUrltoId(shortUrl);
 
 			var exsitinglink = unitOfWork.LinkRepository.GetByID(id);
 
 			if (exsitinglink?.LongUrl == null)
-				throw new ArgumentException(string.Format("Long Url not found for short Url:{0}.", shortUrl));
+			{
+				string message = string.Format("Long Url not found for short Url:{0}.", shortUrl);
+				logger.Error(message);
+				throw new ArgumentException(message);
+			}
 
 			exsitinglink.Clicks++;
 			unitOfWork.LinkRepository.Update(exsitinglink);
@@ -93,7 +112,11 @@ namespace UrlShortener.Logic
 		protected virtual int ShortUrltoId(string shortUrl)
 		{
 			if (shortUrl.Length % 4 > 2)
-				throw new ArgumentException("short url is not a valid Base64 string");
+			{
+				string message = string.Format("short url {0} is not a valid Base64 string", shortUrl);
+				logger.Error(message);
+				throw new ArgumentException(message);
+			}
 
 			shortUrl = shortUrl.Replace('_', '/');
 			shortUrl = shortUrl.Replace('-', '+');

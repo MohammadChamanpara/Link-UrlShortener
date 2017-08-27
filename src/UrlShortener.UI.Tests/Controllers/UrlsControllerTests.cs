@@ -3,15 +3,30 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Web.Mvc;
 using UrlShortener.Logic;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
 using UrlShortener.UI.Controllers;
 using UrlShortener.UI.Tests.Helpers;
+using System;
 
 namespace UrlShortener.UI.Tests
 {
 	[TestClass()]
 	public class UrlsControllerTests
 	{
+		[TestMethod]
+		public void test()
+		{
+			try
+			{
+				UrlLogic l = null;
+				l?.Shorten(new Link());
+			}
+			catch (Exception e)
+			{
+
+			}
+		}
+
 		[TestMethod()]
 		public void ShortenGet_Always_ShouldReturnView()
 		{

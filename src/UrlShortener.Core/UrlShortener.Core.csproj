@@ -7,8 +7,8 @@
     <ProjectGuid>{FD679B81-51DC-49C3-9967-D5B095478F95}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>UrlShortener.Models</RootNamespace>
-    <AssemblyName>UrlShortener.Models</AssemblyName>
+    <RootNamespace>UrlShortener.Core</RootNamespace>
+    <AssemblyName>UrlShortener.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

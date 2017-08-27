@@ -1,6 +1,6 @@
 ﻿using System;
 using UrlShortener.DataAccess;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
 
 namespace UrlShortener.Logic
 {

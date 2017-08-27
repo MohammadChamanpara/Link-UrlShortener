@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 using System.Web.Http;
 using System.Web.Http.Description;
 using UrlShortener.Logic;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
 using UrlShortener.WebApi.ExceptionFilters;
 
 namespace UrlShortener.Controllers

@@ -2,7 +2,7 @@
 using System.Web;
 using System.Web.Mvc;
 using UrlShortener.Logic;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
 
 namespace UrlShortener.UI.Controllers
 {

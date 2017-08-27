@@ -96,9 +96,9 @@
       <Project>{7A1812D6-E712-4111-A4E6-BCD2E90B248B}</Project>
       <Name>UrlShortener.Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UrlShortener.Models\UrlShortener.Models.csproj">
+    <ProjectReference Include="..\UrlShortener.Core\UrlShortener.Core.csproj">
       <Project>{FD679B81-51DC-49C3-9967-D5B095478F95}</Project>
-      <Name>UrlShortener.Models</Name>
+      <Name>UrlShortener.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\UrlShortener.WebApi\UrlShortener.WebApi.csproj">
       <Project>{0E49CCB9-78B2-4637-BF64-6A917608BC78}</Project>

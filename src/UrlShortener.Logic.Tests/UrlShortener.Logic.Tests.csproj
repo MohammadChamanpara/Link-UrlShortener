@@ -85,9 +85,9 @@
       <Project>{7A1812D6-E712-4111-A4E6-BCD2E90B248B}</Project>
       <Name>UrlShortener.Logic</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UrlShortener.Models\UrlShortener.Models.csproj">
+    <ProjectReference Include="..\UrlShortener.Core\UrlShortener.Core.csproj">
       <Project>{fd679b81-51dc-49c3-9967-d5b095478f95}</Project>
-      <Name>UrlShortener.Models</Name>
+      <Name>UrlShortener.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

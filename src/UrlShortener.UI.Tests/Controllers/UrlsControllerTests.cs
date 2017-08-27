@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System.Web.Mvc;
 using UrlShortener.Logic;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
 using UrlShortener.UI.Controllers;
 using UrlShortener.UI.Tests.Helpers;
 

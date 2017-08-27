@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Moq;
 using FluentAssertions;
 using UrlShortener.DataAccess;
-using UrlShortener.Models;
+using UrlShortener.Core.Models;
 
 namespace UrlShortener.Logic.Tests
 {

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace UrlShortener.Models
+namespace UrlShortener.Core.Models
 {
 	/// <summary>
 	/// This models servers as DomainModel, ViewModel and DataModel in this application

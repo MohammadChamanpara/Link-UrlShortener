@@ -209,6 +209,10 @@
       <Project>{f37e382b-5c7e-4079-9402-c4d401c486d4}</Project>
       <Name>UrlShortener.DataAccess</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UrlShortener.Loggers.AzureApplicationInsights\UrlShortener.Loggers.AzureApplicationInsights.csproj">
+      <Project>{E3A537DA-861F-4107-AA1C-0848657F1C66}</Project>
+      <Name>UrlShortener.Loggers.AzureApplicationInsights</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UrlShortener.Logic\UrlShortener.Logic.csproj">
       <Project>{7a1812d6-e712-4111-a4e6-bcd2e90b248b}</Project>
       <Name>UrlShortener.Logic</Name>

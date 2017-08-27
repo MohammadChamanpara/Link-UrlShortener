@@ -9,6 +9,10 @@ using UrlShortener.Core.Log;
 
 namespace UrlShortener.Loggers.AzureApplicationInsights
 {
+	/// <summary>
+	/// Azure Application Insight Logger for application logging purpose
+	/// </summary>
+	/// <seealso cref="UrlShortener.Core.Log.ILogger" />
 	public class AiLogger : ILogger
 	{
 		private readonly TelemetryClient telemetryClient = new TelemetryClient();

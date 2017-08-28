@@ -12,7 +12,7 @@ namespace UrlShortener.DataAccess
 	public class UrlShortenerContext : DbContext, IUrlShortenerContext
 	{
 		public virtual DbSet<Link> Links { get; set; }
-		public UrlShortenerContext() : base("UrlShortenerDB") { }
+		public UrlShortenerContext() : base("LinkDB") { }
 
 		public void MarkAsModified<TEntity>(TEntity entity) where TEntity : class
 		{

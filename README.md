@@ -3,7 +3,7 @@
 This is a sample Url shortener application named Link.  
   
 You can shorten URLs to make them easier to share using the Link URL shortener.  
-For example, the short URL [li-nk.azurewebsites.net/AwAAAA](li-nk.azurewebsites.net/AwAAAA) takes people to https://github.com/MohammadChamanpara/Link-UrlShortener/blob/master/README.md
+For example, the short URL [li-nk.azurewebsites.net/AwAAAA](http://li-nk.azurewebsites.net/AwAAAA) takes people to https://github.com/MohammadChamanpara/Link-UrlShortener/blob/master/README.md
 Not that short on azure though :)
 
 ### Create a shortened URL

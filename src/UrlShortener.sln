@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.WebApi", "UrlShortener.WebApi\UrlShortener.WebApi.csproj", "{0E49CCB9-78B2-4637-BF64-6A917608BC78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.UI", "UrlShortener.UI\UrlShortener.UI.csproj", "{953C61E4-F6B3-47DF-8EBB-C0DD4F300626}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Logic", "UrlShortener.Logic\UrlShortener.Logic.csproj", "{7A1812D6-E712-4111-A4E6-BCD2E90B248B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.Logic.Tests", "UrlShortener.Logic.Tests\UrlShortener.Logic.Tests.csproj", "{9561D714-85DC-4DC7-8661-7D6AC74254A9}"
@@ -16,8 +18,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UrlShortener.Tests", "UrlShortener.Tests", "{D8F010AF-287B-43AC-B5D8-AC51B6A7BA1E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UrlShortener", "UrlShortener", "{C8C2BEBE-66C6-4E5C-A326-0FA26519AF91}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.UI", "UrlShortener.UI\UrlShortener.UI.csproj", "{953C61E4-F6B3-47DF-8EBB-C0DD4F300626}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrlShortener.DataAccess.Tests", "UrlShortener.DataAccess.Tests\UrlShortener.DataAccess.Tests.csproj", "{91F067EF-E836-4EFC-BF72-CF95DA723269}"
 EndProject

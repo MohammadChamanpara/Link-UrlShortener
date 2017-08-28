@@ -69,6 +69,6 @@ The custom logging mechanism of the application is also based on the Application
   ![Logs](screenshots/Solution_Structure.png)  
   
 ## Acknowledgements
-  I am willing to extend my gratitude to those friends who initiated this urge in me to start working on this project.  
+  I am willing to extend my gratitude to those who initiated this urge in me to start working on this project.  
   I hope the high respect I have for my product is demonstrated through this project.
 

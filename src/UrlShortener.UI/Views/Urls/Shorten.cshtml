@@ -34,7 +34,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.ShortUrl, htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="" style="display: inline-block">
-                    @Html.RouteLink(Request?.Url?.Authority + "/" + Model.ShortUrl, "Expand", new { Model.ShortUrl }, new { @style = "margin-left: 15px; padding-right: 1px", @class = "form-control" })
+                    @Html.RouteLink(Request?.Url?.Authority + "/" + Model.ShortUrl, "Expand", new { Model.ShortUrl }, new { target = "_blank", @style = "margin-left: 15px; padding-right: 1px", @class = "form-control" })
                 </div>
             </div>
         }

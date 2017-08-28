@@ -8,7 +8,7 @@ For example, the short URL [li-nk.azurewebsites.net/AwAAAA](http://li-nk.azurewe
 _Not that short on azure though :)_  
   
 ## Create a shortened URL
-  1. Visit the Link URL shortener site at [li-nk.azurewebsites.net](li-nk.azurewebsites.net).
+  1. Visit the Link URL shortener site at [li-nk.azurewebsites.net](http://li-nk.azurewebsites.net).
   1. Write or paste your URL in the Long URL box.
   1. Click Shorten URL.
   1. Below the “Shorten Url” button, you’ll see the short version of your url. 
@@ -40,11 +40,11 @@ The logic of the application is injected in, using the strategy pattern. Current
 A custom logger is implemented based on Azure Application insight and sends application event logs and exceptions as telemetry data to Azure.
 
 ## Working Instance on Azure
-A working instance of the Link is deployed to Microsoft Azure platform and accessible via [li-nk.azurewebsites.net](li-nk.azurewebsites.net)  
+A working instance of the Link is deployed to Microsoft Azure platform and accessible via [li-nk.azurewebsites.net](http://li-nk.azurewebsites.net)  
 An Azure SQL Data Base is the used data storage for the deployed instance of the project. 
 
 ## Azure Application Insights
-Azure Application insight has been employed for the application in order to Detect and diagnose exceptions and application performance issues. It is used to monitor the application and automatically detect performance anomalies.  
+Azure Application insight has been employed for the application in order to diagnose exceptions and application performance issues. It is used to monitor the application and automatically detect performance anomalies.  
   
 ![Performance](screenshots/AI_Performance.png)  
   

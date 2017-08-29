@@ -12,7 +12,7 @@ _Not that short on azure though :)_
   1. Write or paste your URL in the Long URL box.
   1. Click Shorten URL.
   1. Below the “Shorten Url” button, you’ll see the short version of your url. 
-  1. Copy the generated url or just click on it to have it openned in a new browser tab.
+  1. Copy the generated url or just click on it to have it opened in a new browser tab.
 
 ## Table of contents
 

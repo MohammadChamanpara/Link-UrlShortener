@@ -12,7 +12,7 @@ _Not that short on azure though :)_
   1. Write or paste your URL in the Long URL box.
   1. Click Shorten URL.
   1. Below the “Shorten Url” button, you’ll see the short version of your url. 
-  1. Copy the generated url or just click on it to have it openned in a new browser tab.
+  1. Copy the generated url or just click on it to have it opened in a new browser tab.
 
 ## Table of contents
 
@@ -69,6 +69,6 @@ The custom logging mechanism of the application is also based on the Application
   ![Logs](screenshots/Solution_Structure.png)  
   
 ## Acknowledgements
-  I am willing to extend my gratitude to those friends who initiated this urge in me to start working on this project.  
+  I am willing to extend my gratitude to those who initiated this urge in me to start working on this project.  
   I hope the high respect I have for my product is demonstrated through this project.
 

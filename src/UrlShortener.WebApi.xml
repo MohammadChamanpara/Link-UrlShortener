@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>UrlShortener.WebApi</name>
+    </assembly>
+    <members>
+        <member name="T:UrlShortener.WebApi.App_Start.UnityConfig">
+            <summary>
+            Specifies the Unity configuration for the main container.
+            </summary>
+        </member>
+        <member name="M:UrlShortener.WebApi.App_Start.UnityConfig.GetConfiguredContainer">
+            <summary>
+            Gets the configured Unity container.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:UrlShortener.WebApi.App_Start.UnityConfig.RegisterTypes(Microsoft.Practices.Unity.IUnityContainer)" -->
+        <member name="T:UrlShortener.WebApi.App_Start.UnityWebApiActivator">
+            <summary>Provides the bootstrapping for integrating Unity with WebApi when it is hosted in ASP.NET</summary>
+        </member>
+        <member name="M:UrlShortener.WebApi.App_Start.UnityWebApiActivator.Start">
+            <summary>Integrates Unity when the application starts.</summary>
+        </member>
+        <member name="M:UrlShortener.WebApi.App_Start.UnityWebApiActivator.Shutdown">
+            <summary>Disposes the Unity container when the application is shut down.</summary>
+        </member>
+        <member name="T:UrlShortener.WebApi.ExceptionFilters.HandleExceptionFilterAttribute">
+            <summary>
+            Handles the exceptions thrown by Logic or Data Layers and casts to 
+            a web meaningful target Response message 
+            </summary>
+            <seealso cref="T:System.Web.Http.Filters.ExceptionFilterAttribute" />
+        </member>
+        <member name="T:UrlShortener.Controllers.UrlsController">
+            <summary>
+            The api controller to provide UrlShortener app with web api and 
+            this service to be used widely and easily by any consumer client technology
+            </summary>
+            <seealso cref="T:System.Web.Http.ApiController" />
+        </member>
+        <member name="M:UrlShortener.Controllers.UrlsController.#ctor(UrlShortener.Logic.IUrlLogic)">
+            <summary>
+            Initializes a new instance of the <see cref="T:UrlShortener.Controllers.UrlsController"/> class.
+            </summary>
+            <param name="urlLogic">The URL logic.</param>
+        </member>
+        <member name="M:UrlShortener.Controllers.UrlsController.Shorten(UrlShortener.Core.Models.Link)">
+            <summary>
+            A post method which shortens the LongUrl in the specified link object.
+            </summary>
+            <param name="link">The link.</param>
+            <returns>An <see cref="T:System.Web.Http.IHttpActionResult"/> based on the parameter and the operations</returns>
+        </member>
+        <member name="M:UrlShortener.Controllers.UrlsController.Expand(System.String)">
+            <summary>
+            Expands the specified short URL and redirects to the corresponding LongUrl in case of success.
+            </summary>
+            <param name="shortUrl">The short URL to be expanded.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

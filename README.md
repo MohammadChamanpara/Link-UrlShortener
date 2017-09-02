@@ -5,7 +5,7 @@ This is a sample Url shortener application named Link.
 You can shorten URLs to make them easier to share using the Link URL shortener.  
 For example, the short URL [li-nk.azurewebsites.net/AwAAAA](http://li-nk.azurewebsites.net/AwAAAA) takes people to https://github.com/MohammadChamanpara/Link-UrlShortener/blob/master/README.md  
   
-_Not that short on azure though :)_  
+_Not that short on Azure though :)_  
   
 ## Create a shortened URL
   1. Visit the Link URL shortener site at [li-nk.azurewebsites.net](http://li-nk.azurewebsites.net).
@@ -22,6 +22,7 @@ _Not that short on azure though :)_
   * [Implementation Notes](#implementation-notes)  
   * [Working Instance on Azure](#working-instance-on-azure)
   * [Azure Application Insights](#azure-application-insights)
+  * [Link Web Api](#link-web-api)
   * [Solution Structure](#solution-structure)
   * [Acknowledgements](#acknowledgements)
 
@@ -40,19 +41,32 @@ The logic of the application is injected in, using the strategy pattern. Current
 A custom logger is implemented based on Azure Application insight and sends application event logs and exceptions as telemetry data to Azure.
 
 ## Working Instance on Azure
-A working instance of the Link is deployed to Microsoft Azure platform and accessible via [li-nk.azurewebsites.net](http://li-nk.azurewebsites.net)  
-An Azure SQL Data Base is the used data storage for the deployed instance of the project. 
+A working instance of the Link application is deployed to a Microsoft Azure Web App and accessible via [li-nk.azurewebsites.net](http://li-nk.azurewebsites.net). The API of the application is also deployed to an API App and can be accessed and consumed by client applications via [li-nk-api.azurewebsites.net](http://li-nk-api.azurewebsites.net/)  
+  
+An Azure SQL Data Base is the used data storage for the deployed instances of the project.  
+  
+![Azure Resources](screenshots/AzureResources.png)  
 
 ## Azure Application Insights
 Azure Application insight has been employed for the application in order to diagnose exceptions and application performance issues. It is used to monitor the application and automatically detect performance anomalies.  
   
-![Performance](screenshots/AI_Performance.png)  
+![Performance](screenshots/AiPerformance.png)  
   
-![Health](screenshots/AI_Health.png)  
+![Health](screenshots/AiHealth.png)  
   
 The custom logging mechanism of the application is also based on the Application Insights and collects traces, exceptions, and all the application events of various severities and sends to Azure Application Insights.  
   
-![Logs](screenshots/AI_log.png)  
+![Logs](screenshots/AiLog.png)  
+  
+## Link Web API
+An API layer is provided for the client applications to consume and use url shortening facilities.
+Asp.Net WebApi is used for the implementation and the API is available on an Azure API App  [li-nk-api.azurewebsites.net](http://li-nk-api.azurewebsites.net) and ready to be consumed.  
+  
+Swashbuckle swagger is enabled for the API for easier use and having a simple documentation on API.  
+  
+  ![Swagger](screenshots/Swagger.png)  
+  
+Application insight features are also available on this layer and trace and diagnostic data are actively being sent to Azure Application Insight resource.
   
 ## Solution Structure
   1. __UrlShortener.Core__: Common facilities, helpers, and models are stored in this project.  
@@ -66,7 +80,7 @@ The custom logging mechanism of the application is also based on the Application
   1. __UrlShortener.DataAccess.Tests__: data access layer tests.  
   1. __UrlShortener.Loggers.ApplicationInsights__: An implementation of the ILogger interface which uses Azure application insights as an underlying framework to log application events.  
     
-  ![Logs](screenshots/Solution_Structure.png)  
+  ![Structure](screenshots/SolutionStructure.png)  
   
 ## Acknowledgements
   I am willing to extend my gratitude to those who initiated this urge in me to start working on this project.  

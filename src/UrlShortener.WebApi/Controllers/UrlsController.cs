@@ -29,9 +29,10 @@ namespace UrlShortener.Controllers
 		}
 
 		/// <summary>
-		/// A post method which shortens the LongUrl in the specified link object.
+		/// A post method which shortens the LongUrl in the specified link object 
+		/// and returns a link object with the calculated shortUrl.
 		/// </summary>
-		/// <param name="link">The link.</param>
+		/// <param name="link">The link object from which long url is retrieved and used for shortening.</param>
 		/// <returns>An <see cref="IHttpActionResult"/> based on the parameter and the operations</returns>
 		[HttpPost]
 		[ResponseType(typeof(Link))]

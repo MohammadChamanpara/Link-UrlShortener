@@ -22,7 +22,8 @@ _Not that short on Azure though :)_
   * [Implementation Notes](#implementation-notes)  
   * [Working Instance on Azure](#working-instance-on-azure)
   * [Azure Application Insights](#azure-application-insights)
-  * [Link Web Api](#link-web-api)
+  * [REST API](#rest-api)
+  * [Unit Tests](#unit-tests)
   * [Solution Structure](#solution-structure)
   * [Acknowledgements](#acknowledgements)
 
@@ -58,15 +59,21 @@ The custom logging mechanism of the application is also based on the Application
   
 ![Logs](screenshots/AiLog.png)  
   
-## Link Web API
-An API layer is provided for the client applications to consume and use url shortening facilities.
-Asp.Net WebApi is used for the implementation and the API is available on an Azure API App  [li-nk-api.azurewebsites.net](http://li-nk-api.azurewebsites.net) and ready to be consumed.  
+## REST API
+A RESTful API layer is provided for the client applications to consume and use url shortening facilities.
+Asp.Net WebApi 2.0 is used for the implementation and the API is available on an Azure API App  [li-nk-api.azurewebsites.net](http://li-nk-api.azurewebsites.net) and ready to be consumed.  
   
 Swashbuckle swagger is enabled for the API for easier use and having a simple documentation on API.  
   
   ![Swagger](screenshots/Swagger.png)  
   
 Application insight features are also available on this layer and trace and diagnostic data are actively being sent to Azure Application Insight resource.
+
+## Unit Tests
+A number of unit tests are prepared for each project of the application. Unit tests for each project are organized in a separate project. MSTest is the test framework used and FluentAssertions and Moq are the assertion and mocking frameworks. It is tried to show different examples, while the coverage can be improved.  
+A naming convention as _Method_Condition_ExpectedBahavior_ is utilized for naming unit tests.  
+  
+  ![UnitTests](screenshots/UnitTests.png)   
   
 ## Solution Structure
   1. __UrlShortener.Core__: Common facilities, helpers, and models are stored in this project.  

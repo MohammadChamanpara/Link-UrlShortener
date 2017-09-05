@@ -71,6 +71,7 @@ Application insight features are also available on this layer and trace and diag
 
 ## Unit Tests
 A number of unit tests are prepared for each project of the application. Unit tests for each project are organized in a separate project. MSTest is the test framework used and FluentAssertions and Moq are the assertion and mocking frameworks. It is tried to show different examples, while the coverage can be improved.  
+A naming convention as _Method_Condition_ExpectedBahavior_ is utilized for naming unit tests.  
   
   ![UnitTests](screenshots/UnitTests.png)   
   
